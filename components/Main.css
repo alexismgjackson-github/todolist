@@ -1,0 +1,60 @@
+main {
+  padding: 2rem;
+}
+
+.to-do-input-container {
+  margin: 2rem 0 8rem 0;
+}
+
+.to-do-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.task {
+  border: 1px solid var(--color-bold);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.if-btn-container,
+.else-btn-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.edit-task-btn,
+.delete-task-btn,
+.update-task-btn,
+.cancel-btn {
+  align-items: center;
+  background-color: var(--color-light);
+  display: flex;
+  padding: 0;
+  width: min-content;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 2rem 10rem 8rem 10rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  main {
+    padding: 2rem 20rem 8rem 20rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 2rem 30rem 8rem 30rem;
+  }
+}

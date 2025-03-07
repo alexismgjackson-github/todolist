@@ -1,0 +1,125 @@
+:root {
+  --font-primary: "Roboto Mono", serif;
+  --color-extralight: #fff;
+  --color-light: #ece9df;
+  --color-bold: #000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-light);
+  font-family: var(--font-primary);
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+p,
+input,
+ul,
+li,
+span {
+  color: var(--color-bold);
+  font-size: 1.6rem;
+}
+
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+input {
+  background-color: var(--color-extralight);
+  border: 1px solid var(--color-bold);
+  border-radius: 0.75rem;
+  color: var(--color-bold);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+input[type="text"] {
+  transition: none;
+}
+
+input[type="text"]:focus {
+  outline: 0.1rem solid var(--color-bold);
+}
+
+button {
+  background-color: var(--color-bold);
+  border-radius: 0.75rem;
+  border-style: none;
+  color: var(--color-extralight);
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.375rem;
+  padding: 1.25rem 5rem;
+  text-transform: uppercase;
+  transition: 0.25s;
+  width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+li {
+  font-weight: 400;
+  line-height: 2.8rem;
+  list-style: none;
+}
+
+:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
