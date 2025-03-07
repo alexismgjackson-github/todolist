@@ -13,7 +13,7 @@ main {
 
 .task {
   border: 1px solid var(--color-bold);
-  border-radius: 0.75rem;
+  border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

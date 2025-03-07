@@ -44,19 +44,25 @@ export default function Main() {
     <>
       <main>
         <section className="to-do-input-container">
-          <input
-            className="to-do-input"
-            type="text"
-            id="to-do-input"
-            placeholder="e.g. Go grocery shopping"
-            aria-label="Type in a new task"
-            value={newTask}
-            onChange={handleChange}
-            required
-          />
-          <button className="add-task-btn" onClick={addNewTask}>
-            Add New Task
-          </button>
+          <form className="add-tasks-form">
+            <input
+              className="to-do-input"
+              type="text"
+              id="to-do-input"
+              placeholder="e.g. Meal prep for the week"
+              aria-label="Type in a new task"
+              value={newTask}
+              onChange={handleChange}
+              required
+            />
+            <button
+              className="add-task-btn"
+              onClick={addNewTask}
+              disabled={newTask.length < 4}
+            >
+              Add New Task
+            </button>
+          </form>
         </section>
         <section className="to-do-list-container">
           <ul className="to-do-list">
@@ -72,7 +78,7 @@ export default function Main() {
                     <div className="if-btn-container">
                       <button onClick={updateTask} className="update-task-btn">
                         <img
-                          src="public/assets/icons/update.svg"
+                          src="/assets/icons/update.svg"
                           alt="Update task"
                           aria-label="Update task"
                         />
@@ -82,7 +88,7 @@ export default function Main() {
                         className="cancel-btn"
                       >
                         <img
-                          src="public/assets/icons/cancel.svg"
+                          src="/assets/icons/cancel.svg"
                           alt="Cancel action"
                           aria-label="Cancel action"
                         />
@@ -98,7 +104,7 @@ export default function Main() {
                         className="delete-task-btn"
                       >
                         <img
-                          src="public/assets/icons/delete.svg"
+                          src="/assets/icons/delete.svg"
                           alt="Delete task"
                           aria-label="Delete task"
                         />
@@ -109,7 +115,7 @@ export default function Main() {
                       >
                         {" "}
                         <img
-                          src="public/assets/icons/edit.svg"
+                          src="/assets/icons/edit.svg"
                           alt="Edit task"
                           aria-label="Edit task"
                         />
