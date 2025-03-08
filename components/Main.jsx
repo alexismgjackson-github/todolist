@@ -71,12 +71,13 @@ export default function Main() {
           <ul className="to-do-list">
             {tasks.map((task) => (
               <li key={task.id} className="task">
+                {/* TASK IN EDIT MODE */}
                 {isEditingTask?.id === task.id ? (
                   <>
                     <input
                       type="text"
                       value={editTaskText}
-                      onChange={(e) => setEditTaskText(e.target.value)}
+                      onChange={(event) => setEditTaskText(event.target.value)}
                     />
                     <div className="if-btn-container">
                       <button onClick={updateTask} className="update-task-btn">
@@ -100,6 +101,7 @@ export default function Main() {
                   </>
                 ) : (
                   <>
+                    {/* TASK IN DEFAULT MODE */}
                     {task.text}
                     <div className="else-btn-container">
                       <button
