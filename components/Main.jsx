@@ -3,17 +3,31 @@ import { v4 as uuidv4 } from "uuid";
 import "./Main.css";
 
 export default function Main() {
+  // initialize the state variable "tasks" with an empty array
+
   const [tasks, setTasks] = useState([]);
+
+  // initialize the state variable "newTask" with an empty string
 
   const [newTask, setNewTask] = useState("");
 
+  // initialize the state variable "isEditingTask" with null
+
   const [isEditingTask, setIsEditingTask] = useState(null);
 
+  // initialize the state variable "editTaskText" with an empty string
+
   const [editTaskText, setEditTaskText] = useState("");
+
+  // update "newTask" state with the value entered into an input field whenever the user types something in it
 
   const handleChange = (event) => {
     setNewTask(event.target.value);
   };
+
+  // prevent the page from refreshing
+  // add a new task with a unique ID and the entered text to the list of tasks
+  // clear the input field for the next task
 
   const addNewTask = (event) => {
     event.preventDefault();
@@ -21,14 +35,23 @@ export default function Main() {
     setNewTask("");
   };
 
+  // remove the task with passed id from the tasks array
+  // update "tasks" state to reflect the change
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
+
+  // mark the selected task as the one being edited
+  // populate the input field with its text
 
   const editTask = (task) => {
     setIsEditingTask(task);
     setEditTaskText(task.text);
   };
+
+  // end the editing process by setting "isEditingTask" to null
+  // clear the input field
 
   const updateTask = () => {
     setTasks(
