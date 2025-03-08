@@ -118,8 +118,8 @@ export default function Main() {
                       />
                       <div className="if-btn-container">
                         <button
-                          onClick={() => updateTask()}
                           className="update-task-btn"
+                          onClick={() => updateTask()}
                         >
                           <img
                             src="/assets/icons/update.svg"
@@ -128,8 +128,8 @@ export default function Main() {
                           />
                         </button>
                         <button
-                          onClick={() => setIsEditingTask(null)}
                           className="cancel-btn"
+                          onClick={() => setIsEditingTask(null)}
                         >
                           <img
                             src="/assets/icons/cancel.svg"
@@ -146,8 +146,8 @@ export default function Main() {
                     {task.text}
                     <div className="else-btn-container">
                       <button
-                        onClick={() => deleteTask(task.id)}
                         className="delete-task-btn"
+                        onClick={() => deleteTask(task.id)}
                       >
                         <img
                           src="/assets/icons/delete.svg"
@@ -156,8 +156,8 @@ export default function Main() {
                         />
                       </button>
                       <button
-                        onClick={() => editTask(task)}
                         className="edit-task-btn"
+                        onClick={() => editTask(task)}
                       >
                         {" "}
                         <img
