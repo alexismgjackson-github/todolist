@@ -35,22 +35,13 @@ h1 {
 p,
 input,
 ul,
-li,
-span {
+li {
   color: var(--color-bold);
   font-size: 1.6rem;
 }
 
 p {
   font-weight: 400;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  cursor: pointer;
 }
 
 input {
@@ -102,25 +93,9 @@ li {
   opacity: 0.5;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 3.6rem;
   }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 }

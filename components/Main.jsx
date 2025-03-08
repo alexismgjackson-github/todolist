@@ -58,13 +58,16 @@ export default function Main() {
             <button
               className="add-task-btn"
               onClick={addNewTask}
-              disabled={newTask.length < 4}
+              disabled={newTask.length < 5}
             >
               Add New Task
             </button>
           </form>
         </section>
         <section className="to-do-list-container">
+          <span className="to-do-list-length">
+            <p className="length">{tasks.length} task(s) exist</p>
+          </span>
           <ul className="to-do-list">
             {tasks.map((task) => (
               <li key={task.id} className="task">
