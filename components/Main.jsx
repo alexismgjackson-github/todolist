@@ -105,44 +105,37 @@ export default function Main() {
             {tasks.map((task) => (
               <li key={task.id} className="task">
                 {isEditingTask?.id === task.id ? (
-                  {
-                    /* EDITING TASK MODE */
-                  }(
-                    <>
-                      <input
-                        type="text"
-                        value={editTaskText}
-                        onChange={(event) =>
-                          setEditTaskText(event.target.value)
-                        }
-                      />
-                      <div className="if-btn-container">
-                        <button
-                          className="update-task-btn"
-                          onClick={() => updateTask()}
-                        >
-                          <img
-                            src="/assets/icons/update.svg"
-                            alt="Update task"
-                            aria-label="Update task"
-                          />
-                        </button>
-                        <button
-                          className="cancel-btn"
-                          onClick={() => setIsEditingTask(null)}
-                        >
-                          <img
-                            src="/assets/icons/cancel.svg"
-                            alt="Cancel action"
-                            aria-label="Cancel action"
-                          />
-                        </button>
-                      </div>
-                    </>
-                  )
+                  <>
+                    <input
+                      type="text"
+                      value={editTaskText}
+                      onChange={(event) => setEditTaskText(event.target.value)}
+                    />
+                    <div className="if-btn-container">
+                      <button
+                        className="update-task-btn"
+                        onClick={() => updateTask()}
+                      >
+                        <img
+                          src="/assets/icons/update.svg"
+                          alt="Update task"
+                          aria-label="Update task"
+                        />
+                      </button>
+                      <button
+                        className="cancel-btn"
+                        onClick={() => setIsEditingTask(null)}
+                      >
+                        <img
+                          src="/assets/icons/cancel.svg"
+                          alt="Cancel action"
+                          aria-label="Cancel action"
+                        />
+                      </button>
+                    </div>
+                  </>
                 ) : (
                   <>
-                    {/* DEFAULT TASK MODE */}
                     {task.text}
                     <div className="else-btn-container">
                       <button
