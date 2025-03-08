@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./Main.css";
 
 export default function Main() {
-  // initialize the state variable "tasks" with an empty array
+  // initialize the state variable "tasks" from localStorage or set an empty array if no tasks are found
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    localStorage.getItem("tasks")
+      ? JSON.parse(localStorage.getItem("tasks"))
+      : []
+  );
 
   // initialize the state variable "newTask" with an empty string
 
@@ -35,7 +39,13 @@ export default function Main() {
     setNewTask("");
   };
 
-  // remove the task with passed id from the tasks array
+  // save tasks to localStorage every time the "tasks" array changes
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  // remove the task with passed id from the "tasks" array
   // update "tasks" state to reflect the change
 
   const deleteTask = (id) => {
