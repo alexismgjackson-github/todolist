@@ -39,12 +39,6 @@ export default function Main() {
     setNewTask("");
   };
 
-  // save tasks to localStorage every time the "tasks" array changes
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
   // remove the task with passed id from the "tasks" array
   // update "tasks" state to reflect the change
 
@@ -72,6 +66,12 @@ export default function Main() {
     setIsEditingTask(null);
     setEditTaskText("");
   };
+
+  // save tasks to localStorage every time the "tasks" array changes
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <>
@@ -104,37 +104,45 @@ export default function Main() {
           <ul className="to-do-list">
             {tasks.map((task) => (
               <li key={task.id} className="task">
-                {/* TASK IN EDIT MODE */}
                 {isEditingTask?.id === task.id ? (
-                  <>
-                    <input
-                      type="text"
-                      value={editTaskText}
-                      onChange={(event) => setEditTaskText(event.target.value)}
-                    />
-                    <div className="if-btn-container">
-                      <button onClick={updateTask} className="update-task-btn">
-                        <img
-                          src="/assets/icons/update.svg"
-                          alt="Update task"
-                          aria-label="Update task"
-                        />
-                      </button>
-                      <button
-                        onClick={() => setIsEditingTask(null)}
-                        className="cancel-btn"
-                      >
-                        <img
-                          src="/assets/icons/cancel.svg"
-                          alt="Cancel action"
-                          aria-label="Cancel action"
-                        />
-                      </button>
-                    </div>
-                  </>
+                  {
+                    /* EDITING TASK MODE */
+                  }(
+                    <>
+                      <input
+                        type="text"
+                        value={editTaskText}
+                        onChange={(event) =>
+                          setEditTaskText(event.target.value)
+                        }
+                      />
+                      <div className="if-btn-container">
+                        <button
+                          onClick={() => updateTask()}
+                          className="update-task-btn"
+                        >
+                          <img
+                            src="/assets/icons/update.svg"
+                            alt="Update task"
+                            aria-label="Update task"
+                          />
+                        </button>
+                        <button
+                          onClick={() => setIsEditingTask(null)}
+                          className="cancel-btn"
+                        >
+                          <img
+                            src="/assets/icons/cancel.svg"
+                            alt="Cancel action"
+                            aria-label="Cancel action"
+                          />
+                        </button>
+                      </div>
+                    </>
+                  )
                 ) : (
                   <>
-                    {/* TASK IN DEFAULT MODE */}
+                    {/* DEFAULT TASK MODE */}
                     {task.text}
                     <div className="else-btn-container">
                       <button
