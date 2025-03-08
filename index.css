@@ -1,7 +1,7 @@
 :root {
   --font-primary: "Roboto Mono", serif;
   --color-extralight: #fff;
-  --color-light: #cfe5f2;
+  --color-light: hsl(202, 57%, 90%);
   --color-bold: #000;
 }
 
