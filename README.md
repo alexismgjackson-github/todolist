@@ -44,7 +44,7 @@ I wanted to build a simple yet fully CRUD app to translate my knowledge to more 
 
 ## MOST CHALLENGING
 
-- Updating each task.
+- Editing tasks
 
 ## BUGS
 
