@@ -16,7 +16,10 @@ export default function EditingTaskMode(props) {
             aria-label="Update task"
           />
         </button>
-        <button className="cancel-btn" onClick={() => props.setIsEditingTask(null)}>
+        <button
+          className="cancel-btn"
+          onClick={() => props.setIsEditingTask(null)}
+        >
           <img
             src="/assets/icons/cancel.svg"
             alt="Cancel action"
