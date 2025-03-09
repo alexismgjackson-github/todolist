@@ -1,12 +1,55 @@
-# React + Vite
+# _TO DO LIST - CRUD APP_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To Do List is a fully responsive CRUD app allows the user managed their daily tasks.
 
-Currently, two official plugins are available:
+## FEATURES
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- CRUD
 
-## Expanding the ESLint configuration
+## TECHNOLOGIES
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- CSS
+- React
+- LocalStorage
+- Coolors Color Tool
+- Google Fonts & Icons
+
+
+## WHY I BUILT THIS
+
+I wanted to build a simple CRUD to translate my newfound knowledge to more complex future projects. 
+
+## WHAT I LEARNED
+
+### _USESTATE_
+
+- Adding a new task to LocalStorage with a unique ID along with text entered by the user
+- Removing the task with passed id from LocalStorage
+- Marking the selected task as the one being edited and populating the input field with its specific text
+
+### _USEEFFECT_
+
+- Saving tasks to LocalStorage when the tasks change.
+
+### _RESPONSIVE WEB DESIGN_
+
+- Implementing media queries to add device breakpoints
+- Using device breakpoints to change orientation, font size, etc
+- Using CSS Position, Grid and Flexbox
+
+### _ACCESSIBILITY_
+
+- Calculating the contrast ratio of text, icons and background colors using Coolors' Color Contrast Checker
+- Adding aria-labels and alt tags to buttons, icons, images, etc
+
+## MOST CHALLENGING
+
+- Updating each task.
+
+## BUGS
+
+- I have not found any bugs yet
+
+## FUTURE UPDATES
+
+- No future plans yet
