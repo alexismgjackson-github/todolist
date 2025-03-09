@@ -17,7 +17,7 @@ To Do List is a fully responsive CRUD app allows the user managed their daily ta
 
 ## WHY I BUILT THIS
 
-I wanted to build a simple CRUD to translate my newfound knowledge to more complex future projects. 
+I wanted to build a simple yet fully CRUD app to translate my knowledge to more complex future projects. 
 
 ## WHAT I LEARNED
 
