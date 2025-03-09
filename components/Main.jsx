@@ -13,17 +13,11 @@ export default function Main() {
       : []
   );
 
-  // initialize the state variable "newTask" with an empty string
+  const [newTask, setNewTask] = useState(""); // initialize the state variable "newTask" with an empty string
 
-  const [newTask, setNewTask] = useState("");
+  const [isEditingTask, setIsEditingTask] = useState(null); // initialize the state variable "isEditingTask" with null
 
-  // initialize the state variable "isEditingTask" with null
-
-  const [isEditingTask, setIsEditingTask] = useState(null);
-
-  // initialize the state variable "editTaskText" with an empty string
-
-  const [editTaskText, setEditTaskText] = useState("");
+  const [editTaskText, setEditTaskText] = useState(""); // initialize the state variable "editTaskText" with an empty string
 
   // update "newTask" state with the value entered into an input field whenever the user types something in it
 
