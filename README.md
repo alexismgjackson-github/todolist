@@ -52,4 +52,4 @@ I wanted to build a simple CRUD to translate my newfound knowledge to more compl
 
 ## FUTURE UPDATES
 
-- No future plans yet
+- No future plans for right now
