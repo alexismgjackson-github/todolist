@@ -1,0 +1,14 @@
+.else-btn-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.edit-task-btn,
+.delete-task-btn {
+  align-items: center;
+  background-color: var(--color-light);
+  display: flex;
+  padding: 0;
+  width: min-content;
+}

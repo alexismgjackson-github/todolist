@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import DefaultTaskMode from "./DefaultTaskMode";
+import EditingTaskMode from "./EditingTaskMode";
 import "./Main.css";
 
 export default function Main() {
@@ -105,61 +107,21 @@ export default function Main() {
             {tasks.map((task) => (
               <li key={task.id} className="task">
                 {isEditingTask?.id === task.id ? (
-                  <>
-                    <input
-                      type="text"
-                      value={editTaskText}
-                      onChange={(event) => setEditTaskText(event.target.value)}
-                    />
-                    <div className="if-btn-container">
-                      <button
-                        className="update-task-btn"
-                        onClick={() => updateTask()}
-                      >
-                        <img
-                          src="/assets/icons/update.svg"
-                          alt="Update task"
-                          aria-label="Update task"
-                        />
-                      </button>
-                      <button
-                        className="cancel-btn"
-                        onClick={() => setIsEditingTask(null)}
-                      >
-                        <img
-                          src="/assets/icons/cancel.svg"
-                          alt="Cancel action"
-                          aria-label="Cancel action"
-                        />
-                      </button>
-                    </div>
-                  </>
+                  <EditingTaskMode
+                    editTaskText={editTaskText}
+                    isEditingTask={isEditingTask}
+                    updateTask={updateTask}
+                    setEditTaskText={setEditTaskText}
+                    setIsEditingTask={setIsEditingTask}
+                  />
                 ) : (
                   <>
                     {task.text}
-                    <div className="else-btn-container">
-                      <button
-                        className="delete-task-btn"
-                        onClick={() => deleteTask(task.id)}
-                      >
-                        <img
-                          src="/assets/icons/delete.svg"
-                          alt="Delete task"
-                          aria-label="Delete task"
-                        />
-                      </button>
-                      <button
-                        className="edit-task-btn"
-                        onClick={() => editTask(task)}
-                      >
-                        {" "}
-                        <img
-                          src="/assets/icons/edit.svg"
-                          alt="Edit task"
-                          aria-label="Edit task"
-                        />
-                      </button>
-                    </div>
+                    <DefaultTaskMode
+                      task={task}
+                      deleteTask={deleteTask}
+                      editTask={editTask}
+                    />
                   </>
                 )}
               </li>
