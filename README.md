@@ -1,6 +1,6 @@
 # _TO DO LIST - CRUD APP_
 
-To Do List is a fully responsive CRUD app allows the user managed their daily tasks.
+To Do List is a fully responsive CRUD app allows the user to manage their daily tasks.
 
 ## FEATURES
 
