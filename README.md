@@ -52,4 +52,4 @@ I wanted to build a simple yet fully CRUD app to translate my knowledge to more 
 
 ## FUTURE UPDATES
 
-- No future plans for right now
+- Possibly add Drag N Drop feature
