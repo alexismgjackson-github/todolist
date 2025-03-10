@@ -35,7 +35,7 @@ I wanted to build a simple yet fully CRUD app to translate my knowledge to more 
 
 - Implementing media queries to add device breakpoints
 - Using device breakpoints to change orientation, font size, etc
-- Using CSS Position, Grid and Flexbox
+- Using CSS Grid and Flexbox
 
 ### _ACCESSIBILITY_
 
