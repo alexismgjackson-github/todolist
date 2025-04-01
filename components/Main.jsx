@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid"; // generates random UUIDs from the uuid package
 import DefaultTaskMode from "./DefaultTaskMode";
 import EditingTaskMode from "./EditingTaskMode";
 import "./Main.css";
